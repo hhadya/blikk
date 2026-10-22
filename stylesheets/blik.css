@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #212121;
+    width: 100%;
+    overflow-x: hidden;
+    cursor: url(), auto;
+}
+
+.sec_1{
+    width: 100vw;
+    height: 80vw;
+    position: relative;
+}
+
+.maingirl{
+    position: absolute;
+    width: 93vw;
+    height: 80vw;
+    margin-top: 0vw;
+    margin-left: 8vw;
+}

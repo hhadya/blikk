@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Manrope-Regular";
+    src: url(../fonts/Manrope-Regular.ttf) format(truetype);
+    font-style: normal;
+}
+@font-face {
+    font-family: "Prata-Regular";
+    src: url(../fonts/Prata-Regular.ttf) format(truetype);
+    font-style: normal;
+}
