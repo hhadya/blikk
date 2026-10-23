@@ -24,3 +24,1158 @@ body {
     margin-top: 0vw;
     margin-left: 8vw;
 }
+.fon{
+    position: absolute;
+    width: 100vw;
+    height: 80vw;
+    margin-top: 0vw;
+    margin-left: 0vw;
+}
+.svet{
+    position: absolute;
+    width: 100vw;
+    height: 80vw;
+    margin-top: 0vw;
+    margin-left: 0vw;
+}
+.word_b{
+    position: absolute;
+    width: 3vw;
+    height: 10vw;
+    margin-top: 36vw;
+    margin-left: 3vw;
+}
+.word_l{
+    position: absolute;
+    width: 3vw;
+    height: 15vw;
+    margin-top: 31vw;
+    margin-left: 9vw;
+}
+.word_i{
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    margin-top: 36vw;
+    margin-left: 15vw;
+}
+.word_k{
+    position: absolute;
+    width: 3vw;
+    height: 15vw;
+    margin-top: 31vw;
+    margin-left: 28vw;
+}
+
+.word_b,
+.word_l,
+.word_i,
+.word_k {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes appearBlink {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+        filter: blur(4px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.02);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes blinkPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.55;
+    }
+}
+
+
+.word_b {
+    animation:
+        appearBlink 1.2s ease-out 0.3s forwards,
+        blinkPulse 2.8s ease-in-out 1.6s infinite;
+}
+
+.word_l {
+    animation:
+        appearBlink 1.2s ease-out 0.9s forwards,
+        blinkPulse 2.8s ease-in-out 2.2s infinite;
+}
+
+.word_i {
+    animation:
+        appearBlink 1.2s ease-out 1.5s forwards,
+        blinkPulse 2.8s ease-in-out 2.8s infinite;
+}
+
+.word_k {
+    animation:
+        appearBlink 1.2s ease-out 2.1s forwards,
+        blinkPulse 2.8s ease-in-out 3.4s infinite;
+}
+.naming{
+    position: absolute;
+    font-family: "Prata-Regular";
+    font-size: 10vw;
+    width: 32vw;
+    height: 14vw;
+    color: #FFFFFF;
+    margin-top: 33vw;
+    margin-left: 3vw;
+}
+
+.naming {
+    opacity: 0;
+    filter: blur(8px);
+    transform: scale(0.96);
+    letter-spacing: 0.15em;
+    transition:
+        opacity 1s ease,
+        filter 1.2s ease,
+        transform 1.2s ease,
+        text-shadow 1.2s ease,
+        letter-spacing 1.2s ease;
+    pointer-events: none;
+}
+
+
+.sec_1:has(.word_b:hover) .word_b,
+.sec_1:has(.word_b:hover) .word_l,
+.sec_1:has(.word_b:hover) .word_i,
+.sec_1:has(.word_b:hover) .word_k,
+.sec_1:has(.word_l:hover) .word_b,
+.sec_1:has(.word_l:hover) .word_l,
+.sec_1:has(.word_l:hover) .word_i,
+.sec_1:has(.word_l:hover) .word_k,
+.sec_1:has(.word_i:hover) .word_b,
+.sec_1:has(.word_i:hover) .word_l,
+.sec_1:has(.word_i:hover) .word_i,
+.sec_1:has(.word_i:hover) .word_k,
+.sec_1:has(.word_k:hover) .word_b,
+.sec_1:has(.word_k:hover) .word_l,
+.sec_1:has(.word_k:hover) .word_i,
+.sec_1:has(.word_k:hover) .word_k {
+    filter: brightness(1.7) drop-shadow(0 0 1.2vw rgba(255, 255, 255, 0.95));
+    transition: filter 0.4s ease;
+}
+
+
+.sec_1:has(.word_b:hover) .naming,
+.sec_1:has(.word_l:hover) .naming,
+.sec_1:has(.word_i:hover) .naming,
+.sec_1:has(.word_k:hover) .naming {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 1.5vw rgba(255, 255, 255, 0.7);
+}
+
+.word_b, .word_l, .word_i, .word_k {
+    transition: opacity 0.5s ease, filter 0.4s ease;
+}
+
+.sec_1.letters-hover .word_b,
+.sec_1.letters-hover .word_l,
+.sec_1.letters-hover .word_i,
+.sec_1.letters-hover .word_k {
+    opacity: 0;
+    animation: none;
+    filter: brightness(1.7) drop-shadow(0 0 1.2vw rgba(255, 255, 255, 0.95));
+}
+
+.sec_1.letters-hover .naming {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+    letter-spacing: 0.02em;
+    text-shadow: 0 0 1.5vw rgba(255, 255, 255, 0.55);
+}
+
+.sec_2{
+    width: 100vw;
+    height: 83vw;
+    position: relative;
+}
+.line_one{
+    position: absolute;
+    width: 100vw;
+    height: 7vw;
+    margin-top: 0vw;
+    margin-left: 0vw;
+}
+.line_two{
+    position: absolute;
+    width: 100vw;
+    height: 12vw;
+    margin-top: 72vw;
+    margin-left: 0vw;
+}
+.mini_line{
+    position: absolute;
+    width: 88vw;
+    height: 67vw;
+    margin-top: 6vw;
+    margin-left: 6vw;
+}
+.circle_1{
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    margin-top: 8vw;
+    margin-left: 11vw;
+}
+.circle_2{
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    margin-top: 13vw;
+    margin-left: 50vw;
+}
+.circle_3{
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    margin-top: 39vw;
+    margin-left: 25vw;
+}
+.circle_4{
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    margin-top: 45vw;
+    margin-left: 67vw;
+}
+.lipstick{
+    position: absolute;
+    width: 5vw;
+    height: 23vw;
+    margin-top: 9vw;
+    margin-left: 21vw;
+}
+.pudra{
+    position: absolute;
+    width: 16vw;
+    height: 17vw;
+    margin-top: 17vw;
+    margin-left: 54.5vw;
+}
+.moscara{
+    position: absolute;
+    width: 8vw;
+    height: 24vw;
+    margin-top: 39.5vw;
+    margin-left: 33vw;
+}
+.konsiler{
+    position: absolute;
+    width: 4vw;
+    height: 23vw;
+    margin-top: 46vw;
+    margin-left: 77vw;
+}
+.pryam_1{
+    position: absolute;
+    width: 13vw;
+    height: 5vw;
+    margin-top: 34vw;
+    margin-left: 17.5vw;
+}
+.pryam_2{
+    position: absolute;
+    width: 13vw;
+    height: 5vw;
+    margin-top: 7.5vw;
+    margin-left: 56vw;
+}
+.pryam_3{
+    position: absolute;
+    width: 13vw;
+    height: 5vw;
+    margin-top: 65vw;
+    margin-left: 30vw;
+}
+.pryam_4{
+    position: absolute;
+    width: 13vw;
+    height: 5vw;
+    margin-top: 39vw;
+    margin-left: 73vw;
+}
+.t_one{
+    position: absolute;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;
+    width: 7vw;
+    height: 3vw;
+    margin-top: 35.5vw;
+    margin-left: 20.5vw;
+}
+.t_two{
+    position: absolute;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;
+    width: 6vw;
+    height: 3vw;
+    margin-top: 9vw;
+    margin-left: 60vw;
+}
+.t_three{
+    position: absolute;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;
+    width: 5vw;
+    height: 3vw;
+    margin-top: 66.5vw;
+    margin-left: 34vw;
+}
+.t_four{
+    position: absolute;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;
+    width: 10vw;
+    height: 3vw;
+    margin-top: 40.5vw;
+    margin-left: 75vw;
+}
+.cb_1{
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    margin-top: 8vw;
+    margin-left: 11vw;
+}
+.cb_2{
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    margin-top: 13vw;
+    margin-left: 50vw;
+}
+.cb_3{
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    margin-top: 39vw;
+    margin-left: 25vw;
+}
+.cb_4{
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    margin-top: 45vw;
+    margin-left: 67vw;
+}
+.l_white{
+    position: absolute;
+    width: 5vw;
+    height: 23vw;
+    margin-top: 9vw;
+    margin-left: 21vw;
+}
+.p_white{
+    position: absolute;
+    width: 16vw;
+    height: 17vw;
+    margin-top: 17vw;
+    margin-left: 54.5vw;
+}
+.t_white{
+     position: absolute;
+    width: 8vw;
+    height: 24vw;
+    margin-top: 39.5vw;
+    margin-left: 33vw;
+}
+.k_white{
+    position: absolute;
+    width: 4vw;
+    height: 23vw;
+    margin-top: 46vw;
+    margin-left: 77vw;
+}
+.pryam_black_1{
+    position: absolute;
+    width: 13vw;
+    height: 5vw;
+    margin-top: 34vw;
+    margin-left: 17.5vw;
+}
+.pryam_black_2{
+    position: absolute;
+    width: 13vw;
+    height: 5vw;
+    margin-top: 7.5vw;
+    margin-left: 56vw;
+}
+.pryam_black_3{
+    position: absolute;
+    width: 13vw;
+    height: 5vw;
+    margin-top: 65vw;
+    margin-left: 30vw;
+}
+.pryam_black_4{
+    position: absolute;
+    width: 13vw;
+    height: 5vw;
+    margin-top: 39vw;
+    margin-left: 73vw;
+}
+.t_1{
+    position: absolute;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;
+    width: 7vw;
+    height: 3vw;
+    margin-top: 35.5vw;
+    margin-left: 20.5vw;
+}
+.t_2{
+    position: absolute;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;
+    width: 6vw;
+    height: 3vw;
+    margin-top: 9vw;
+    margin-left: 60vw;
+}
+.t_3{
+    position: absolute;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;
+    width: 5vw;
+    height: 3vw;
+    margin-top: 66.5vw;
+    margin-left: 34vw;
+}
+.t_4{
+    position: absolute;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;
+    width: 10vw;
+    height: 3vw;
+    margin-top: 40.5vw;
+    margin-left: 75vw;
+}
+
+
+.cb_1, .cb_2, .cb_3, .cb_4,
+.l_white, .p_white, .t_white, .k_white,
+.pryam_black_1, .pryam_black_2, .pryam_black_3, .pryam_black_4,
+.t_1, .t_2, .t_3, .t_4 {
+    opacity: 0;
+    transition: opacity 0.45s ease, filter 0.45s ease;
+    pointer-events: none;
+}
+
+/* Основные элементы секции — тоже скрыты до появления */
+.circle_1, .circle_2, .circle_3, .circle_4,
+.lipstick, .pudra, .moscara, .konsiler,
+.pryam_1, .pryam_2, .pryam_3, .pryam_4,
+.t_one, .t_two, .t_three, .t_four {
+    opacity: 0;
+    transform: translateY(3vw);
+    filter: blur(6px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        filter 0.8s ease;
+    pointer-events: none;
+}
+
+/* ================== Поочерёдное появление по скроллу ================== */
+
+/* Пара 1: circle_1 + lipstick */
+.sec_2.is-visible .circle_1,
+.sec_2.is-visible .lipstick {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    pointer-events: auto;
+    transition-delay: 0s;
+}
+
+/* Пара 2: circle_2 + pudra */
+.sec_2.is-visible .circle_2,
+.sec_2.is-visible .pudra {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    pointer-events: auto;
+    transition-delay: 0.8s;
+}
+
+/* Пара 3: circle_3 + moscara */
+.sec_2.is-visible .circle_3,
+.sec_2.is-visible .moscara {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    pointer-events: auto;
+    transition-delay: 1.6s;
+}
+
+/* Пара 4: circle_4 + konsiler */
+.sec_2.is-visible .circle_4,
+.sec_2.is-visible .konsiler {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    pointer-events: auto;
+    transition-delay: 2.4s;
+}
+
+/* Через 1 с после каждой пары — pryam + текст */
+.sec_2.is-visible .pryam_1,
+.sec_2.is-visible .t_one {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    transition-delay: 1s;
+}
+
+.sec_2.is-visible .pryam_2,
+.sec_2.is-visible .t_two {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    transition-delay: 1.8s;
+}
+
+.sec_2.is-visible .pryam_3,
+.sec_2.is-visible .t_three {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    transition-delay: 2.6s;
+}
+
+.sec_2.is-visible .pryam_4,
+.sec_2.is-visible .t_four {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    transition-delay: 3.4s;
+}
+
+/* ================== Hover-замена ================== */
+
+/* Группа 1 */
+.sec_2.hover-1 .circle_1,
+.sec_2.hover-1 .lipstick,
+.sec_2.hover-1 .pryam_1,
+.sec_2.hover-1 .t_one {
+    opacity: 0;
+    filter: blur(4px);
+    transition-delay: 0s;
+}
+
+.sec_2.hover-1 .cb_1,
+.sec_2.hover-1 .l_white,
+.sec_2.hover-1 .pryam_black_1,
+.sec_2.hover-1 .t_1 {
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+/* Группа 2 */
+.sec_2.hover-2 .circle_2,
+.sec_2.hover-2 .pudra,
+.sec_2.hover-2 .pryam_2,
+.sec_2.hover-2 .t_two {
+    opacity: 0;
+    filter: blur(4px);
+    transition-delay: 0s;
+}
+
+.sec_2.hover-2 .cb_2,
+.sec_2.hover-2 .p_white,
+.sec_2.hover-2 .pryam_black_2,
+.sec_2.hover-2 .t_2 {
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+/* Группа 3 */
+.sec_2.hover-3 .circle_3,
+.sec_2.hover-3 .moscara,
+.sec_2.hover-3 .pryam_3,
+.sec_2.hover-3 .t_three {
+    opacity: 0;
+    filter: blur(4px);
+    transition-delay: 0s;
+}
+
+.sec_2.hover-3 .cb_3,
+.sec_2.hover-3 .t_white,
+.sec_2.hover-3 .pryam_black_3,
+.sec_2.hover-3 .t_3 {
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+/* Группа 4 */
+.sec_2.hover-4 .circle_4,
+.sec_2.hover-4 .konsiler,
+.sec_2.hover-4 .pryam_4,
+.sec_2.hover-4 .t_four {
+    opacity: 0;
+    filter: blur(4px);
+    transition-delay: 0s;
+}
+
+.sec_2.hover-4 .cb_4,
+.sec_2.hover-4 .k_white,
+.sec_2.hover-4 .pryam_black_4,
+.sec_2.hover-4 .t_4 {
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.sec_2.hover-1 .circle_1,
+.sec_2.hover-1 .lipstick,
+.sec_2.hover-1 .pryam_1,
+.sec_2.hover-1 .t_one,
+.sec_2.hover-2 .circle_2,
+.sec_2.hover-2 .pudra,
+.sec_2.hover-2 .pryam_2,
+.sec_2.hover-2 .t_two,
+.sec_2.hover-3 .circle_3,
+.sec_2.hover-3 .moscara,
+.sec_2.hover-3 .pryam_3,
+.sec_2.hover-3 .t_three,
+.sec_2.hover-4 .circle_4,
+.sec_2.hover-4 .konsiler,
+.sec_2.hover-4 .pryam_4,
+.sec_2.hover-4 .t_four {
+    transition-delay: 0s !important;
+}
+
+.sec_2 .revealed {
+    transition-delay: 0s !important;
+}
+
+.kak {
+    position: absolute;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;        
+    width: 67vw;
+    margin-top: 76vw;
+    margin-left: 21vw;
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: visible;
+}
+
+.kak-text {
+    letter-spacing: 0.02em;
+}
+
+.kak-cursor {
+    display: inline-block;
+    margin-left: 0.15em;
+    color: #000000;
+    font-weight: 300;
+    animation: kakBlink 0.9s step-end infinite;
+}
+
+.kak:not(.is-typing) .kak-cursor {
+    opacity: 0;
+}
+
+@keyframes kakBlink {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0; }
+}
+
+.kak.is-done .kak-cursor {
+    animation: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.for_l{
+    position: absolute;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;        
+    width: 57vw;
+    margin-top: 76vw;
+    height: 7vw;
+    margin-left: 21vw;
+}
+.for_p{
+    position: absolute;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;        
+    width: 71vw;
+    height: 7vw;
+    margin-top: 76vw;
+    margin-left: 21vw;
+}
+.for_t{
+    position: absolute;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;        
+    width: 76vw;
+    height: 7vw;
+    margin-top: 76vw;
+    margin-left: 21vw;
+}
+.for_k{
+    position: absolute;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;        
+    width: 64vw;
+    height: 7vw;
+    margin-top: 76vw;
+    margin-left: 21vw;
+}
+
+.sec_2.pinned-1 .cb_1,
+.sec_2.pinned-1 .l_white,
+.sec_2.pinned-1 .pryam_black_1,
+.sec_2.pinned-1 .t_1,
+.sec_2.pinned-2 .cb_2,
+.sec_2.pinned-2 .p_white,
+.sec_2.pinned-2 .pryam_black_2,
+.sec_2.pinned-2 .t_2,
+.sec_2.pinned-3 .cb_3,
+.sec_2.pinned-3 .t_white,
+.sec_2.pinned-3 .pryam_black_3,
+.sec_2.pinned-3 .t_3,
+.sec_2.pinned-4 .cb_4,
+.sec_2.pinned-4 .k_white,
+.sec_2.pinned-4 .pryam_black_4,
+.sec_2.pinned-4 .t_4 {
+    filter: brightness(1.15) drop-shadow(0 0 1.2vw rgba(255, 255, 255, 0.6));
+    transition: filter 0.5s ease;
+}
+
+/* ================== Тексты .for_* ================== */
+
+.for_l, .for_p, .for_t, .for_k {
+    position: absolute;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;
+    width: 67vw;
+    margin-top: 76vw;
+    margin-left: 21vw;
+    line-height: 1.3;
+    white-space: normal;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.for_l { width: 57vw; }
+.for_p { width: 71vw; }
+.for_t { width: 76vw; }
+.for_k { width: 64vw; }
+
+/* Активный текст — видим и кликабелен */
+.for_l.is-open, .for_p.is-open, .for_t.is-open, .for_k.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Текст с «проявлением» через background-clip */
+.for_l-text, .for_p-text, .for_t-text, .for_k-text {
+    background: linear-gradient(90deg, #000 0, #000 var(--reveal, 0%), transparent var(--reveal, 0%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.kak {
+    transition: opacity 0.4s ease;
+}
+
+.kak.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.for_l, .for_p, .for_t, .for_k {
+    position: absolute;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 1.3vw;          /* ← уменьшено, чтобы влезло в 7vw по высоте */
+    margin-top: 76vw;
+    margin-left: 21vw;
+    line-height: 1.3;
+    white-space: normal;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    /* height убрана — пусть высота определяется текстом */
+}
+
+.for_l { width: 57vw; }
+.for_p { width: 71vw; }
+.for_t { width: 76vw; }
+.for_k { width: 64vw; }
+
+.for_l.is-open, .for_p.is-open, .for_t.is-open, .for_k.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.for_l-text, .for_p-text, .for_t-text, .for_k-text {
+    background: linear-gradient(90deg, #000 0, #000 var(--reveal, 0%), transparent var(--reveal, 0%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.sec_3{
+    width: 100vw;
+    height: 93vw;
+    position: relative;
+}
+.lot_line{
+    position: absolute;
+    width: 100vw;
+    height: 48vw;
+    margin-top: 0vw;
+    margin-left: 0vw;
+}
+.eye_a{
+    position: absolute;
+    width: 33vw;
+    height: 20vw;
+    margin-top: 12vw;
+    margin-left: 35vw;
+}
+.ast{
+    position: absolute;
+    font-family: "Prata-Regular";
+    font-size: 5vw;
+    width: 35vw;
+    height: 7vw;
+    color: #000000;
+    margin-top: 3vw;
+    margin-left: 34vw;
+}
+.ast_mini{
+    position: absolute;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;
+    width: 85vw;
+    height: 11vw;
+    margin-top: 34vw;
+    margin-left: 10vw;
+}
+.ast_girl{
+    position: absolute;
+    width: 19vw;
+    height: 27vw;
+    margin-top: 54vw;
+    margin-left: 2vw;
+}
+.gem_girl{
+    position: absolute;
+    width: 19vw;
+    height: 27vw;
+    margin-top: 62vw;
+    margin-left: 18vw;
+}
+.skot_girl{
+    position: absolute;
+    width: 19vw;
+    height: 27vw;
+    margin-top: 54vw;
+    margin-left: 34vw;
+}
+.dalt_girl{
+    position: absolute;
+    width: 19vw;
+    height: 27vw;
+    margin-top: 62vw;
+    margin-left: 48vw;
+}
+.bl_girl{
+    position: absolute;
+    width: 19vw;
+    height: 27vw;
+    margin-top: 54vw;
+    margin-left: 64vw;
+}
+.d_girl{
+    position: absolute;
+    width: 19vw;
+    height: 27vw;
+    margin-top: 62vw;
+    margin-left: 79vw;
+}
+.eye_g{
+    position: absolute;
+    width: 33vw;
+    height: 20vw;
+    margin-top: 12vw;
+    margin-left: 35vw;
+}
+.gem{
+    position: absolute;
+    font-family: "Prata-Regular";
+    font-size: 5vw;
+    width: 35vw;
+    height: 7vw;
+    color: #000000;
+    margin-top: 3vw;
+    margin-left: 34vw;
+}
+.gem_mini{
+    position: absolute;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;
+    width: 85vw;
+    height: 11vw;
+    margin-top: 34vw;
+    margin-left: 10vw;
+}
+.eye_s{
+    position: absolute;
+    width: 33vw;
+    height: 20vw;
+    margin-top: 12vw;
+    margin-left: 35vw;
+}
+.skot{
+    position: absolute;
+    font-family: "Prata-Regular";
+    font-size: 5vw;
+    width: 35vw;
+    height: 7vw;
+    color: #000000;
+    margin-top: 3vw;
+    margin-left: 38vw;
+}
+.skot_mini{
+    position: absolute;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;
+    width: 85vw;
+    height: 11vw;
+    margin-top: 34vw;
+    margin-left: 10vw;
+}
+.eye_d{
+    position: absolute;
+    width: 33vw;
+    height: 20vw;
+    margin-top: 12vw;
+    margin-left: 35vw;
+}
+.dalt{
+    position: absolute;
+    font-family: "Prata-Regular";
+    font-size: 5vw;
+    width: 35vw;
+    height: 7vw;
+    color: #000000;
+    margin-top: 3vw;
+    margin-left: 35vw;
+}
+.dalt_mini{
+    position: absolute;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;
+    width: 85vw;
+    height: 11vw;
+    margin-top: 34vw;
+    margin-left: 10vw;
+}
+.eye_b{
+    position: absolute;
+    width: 33vw;
+    height: 20vw;
+    margin-top: 12vw;
+    margin-left: 35vw;
+}
+.bl{
+    position: absolute;
+    font-family: "Prata-Regular";
+    font-size: 5vw;
+    width: 35vw;
+    height: 7vw;
+    color: #000000;
+    margin-top: 3vw;
+    margin-left: 34vw;
+}
+.bl_mini{
+     position: absolute;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;
+    width: 85vw;
+    height: 11vw;
+    margin-top: 34vw;
+    margin-left: 10vw;
+}
+.eye_d1{
+    position: absolute;
+    width: 33vw;
+    height: 20vw;
+    margin-top: 12vw;
+    margin-left: 35vw;
+}
+.d{
+    position: absolute;
+    font-family: "Prata-Regular";
+    font-size: 5vw;
+    width: 35vw;
+    height: 7vw;
+    color: #000000;
+    margin-top: 3vw;
+    margin-left: 30vw;
+}
+.d_mini{
+    position: absolute;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Manrope-Regular";
+    font-size: 2vw;
+    width: 85vw;
+    height: 11vw;
+    margin-top: 34vw;
+    margin-left: 10vw;
+}
+
+.eye_a, .ast, .ast_mini,
+.eye_g, .gem, .gem_mini,
+.eye_s, .skot, .skot_mini,      
+.eye_d, .dalt, .dalt_mini,
+.eye_b, .bl, .bl_mini,
+.eye_d1, .d, .d_mini {
+    opacity: 0;
+    transform: translateY(2vw);
+    filter: blur(6px);
+    pointer-events: none;
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+
+.sec_3.show-ast .eye_a,
+.sec_3.show-ast .ast,
+.sec_3.show-ast .ast_mini,
+
+.sec_3.show-gem .eye_g,
+.sec_3.show-gem .gem,
+.sec_3.show-gem .gem_mini,
+
+.sec_3.show-skot .eye_s,
+.sec_3.show-skot .skot,
+.sec_3.show-skot .skot_mini,
+
+.sec_3.show-dalt .eye_d,
+.sec_3.show-dalt .dalt,
+.sec_3.show-dalt .dalt_mini,
+
+.sec_3.show-bl .eye_b,
+.sec_3.show-bl .bl,
+.sec_3.show-bl .bl_mini,
+
+.sec_3.show-d .eye_d1,
+.sec_3.show-d .d,
+.sec_3.show-d .d_mini {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    pointer-events: auto;
+}
+
+.ast_girl, .gem_girl, .skot_girl,
+.dalt_girl, .bl_girl, .d_girl {
+    cursor: pointer;
+    transition: filter 0.4s ease;
+    animation: girlFloat 4s ease-in-out infinite;
+}
+
+.ast_girl:hover, .gem_girl:hover, .skot_girl:hover,
+.dalt_girl:hover, .bl_girl:hover, .d_girl:hover {
+    filter: brightness(1.3) drop-shadow(0 0 1vw rgba(255, 255, 255, 0.7));
+}
+
+/* Плавное «летание» — покачивание */
+@keyframes girlFloat {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-1.2vw); }
+    100% { transform: translateY(0); }
+}
+
+/* Разные задержки, чтобы не «летали» синхронно */
+.gem_girl  { animation-delay: -0.6s; }
+.skot_girl { animation-delay: -1.2s; }
+.dalt_girl { animation-delay: -1.8s; }
+.bl_girl   { animation-delay: -2.4s; }
+.d_girl    { animation-delay: -3s; }
+
+/* Активная девочка — чуть ярче */
+.sec_3.show-ast  .ast_girl,
+.sec_3.show-gem  .gem_girl,
+.sec_3.show-skot .skot_girl,
+.sec_3.show-dalt .dalt_girl,
+.sec_3.show-bl   .bl_girl,
+.sec_3.show-d    .d_girl {
+    filter: brightness(1.25) drop-shadow(0 0 1.2vw rgba(255, 255, 255, 0.8));
+}
+
+.sec_4{
+    width: 100vw;
+    height: 75vw;
+    position: relative;
+}
+.risun{
+    position: absolute;
+    width: 99vw;
+    height: 75vw;
+    margin-top: 0vw;
+    margin-left: 0vw;
+}
