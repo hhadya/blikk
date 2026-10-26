@@ -1076,5 +1076,7 @@ if (heroSec) {
         updateBubble();
     }
 }
+
+
     
 });
